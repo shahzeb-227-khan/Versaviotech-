@@ -4,138 +4,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Versavio Tech | Intelligence in Action</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        thistle: {
-                            50: "#f5ecf8",
-                            100: "#ebd9f2",
-                            200: "#d8b3e5",
-                            300: "#c48dd8",
-                            400: "#b067cb",
-                            500: "#9d41be",
-                            600: "#7d3498",
-                            700: "#5e2772",
-                            800: "#3f1a4c",
-                            900: "#1f0d26",
-                            950: "#16091b"
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        heading: ['Space Grotesk', 'sans-serif']
-                    },
-                    animation: {
-                        'pulse-slow': 'pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                        'float': 'float 6s ease-in-out infinite',
-                        'neon-flow': 'neonFlow 4s linear infinite',
-                    }
-                }
-            }
-        }
+    
+    <!-- Primary Meta Tags (Critical for SEO - these are fallbacks) -->
+    <title>Versavio Tech | AI Solutions & Enterprise Software Development</title>
+    <meta name="title" content="Versavio Tech | AI Solutions & Enterprise Software Development">
+    <meta name="description" content="Versavio Tech builds AI solutions and enterprise software for SAP, automation, and digital transformation. We deliver practical systems that improve workflows and drive business results.">
+    
+    <!-- Robots & Indexing -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.versaviotech.com/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Versavio Tech">
+    <meta property="og:url" content="https://www.versaviotech.com/">
+    <meta property="og:title" content="Versavio Tech | AI Solutions & Enterprise Software Development">
+    <meta property="og:description" content="Versavio Tech builds AI solutions and enterprise software for SAP, automation, and digital transformation.">
+    <meta property="og:image" content="https://www.versaviotech.com/assets/og-default.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Versavio Tech | AI Solutions & Enterprise Software Development">
+    <meta name="twitter:description" content="Versavio Tech builds AI solutions and enterprise software for SAP, automation, and digital transformation.">
+    <meta name="twitter:image" content="https://www.versaviotech.com/assets/og-default.png">
+    
+    <!-- Additional Meta Tags -->
+    <meta name="author" content="Versavio Tech">
+    <meta name="theme-color" content="#9d41be">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    
+    <!-- Preconnect to Critical Origins (Performance) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="preconnect" href="https://images.pexels.com">
+    
+    <!-- DNS Prefetch for third-party resources -->
+    <link rel="dns-prefetch" href="https://assets.calendly.com">
+    
+    <!-- Preload Critical Fonts (Performance - LCP improvement) -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Structured Data - Organization (Critical for Google Knowledge Panel) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Versavio Tech",
+      "url": "https://www.versaviotech.com",
+      "logo": "https://www.versaviotech.com/assets/new_logo.png",
+      "description": "AI Solutions, SAP Integration, and Enterprise Software Development",
+      "foundingDate": "2024",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+92-322-0220670",
+        "contactType": "sales",
+        "email": "info@versaviotech.com",
+        "availableLanguage": "English"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/versavio-tech/"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "PK"
+      }
+    }
     </script>
+    
+    <!-- Critical CSS (Inlined for fastest FCP) -->
     <style>
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-        @keyframes neonFlow {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        @keyframes textGradient {
-            0% { background-position: 0% 50%; }
-            100% { background-position: 200% 50%; }
-        }
-
-        body {
-            background-color: #0a040d;
-            color: #f5ecf8;
-            overflow-x: hidden;
-        }
-        .glass {
-            background: rgba(22, 9, 27, 0.7);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(216, 179, 229, 0.1);
-            position: relative;
-        }
+        /* Critical CSS - Prevents FOUC and improves FCP/LCP */
+        *,*::before,*::after{box-sizing:border-box}
+        html{-webkit-text-size-adjust:100%;line-height:1.5;tab-size:4}
+        body{margin:0;font-family:'Inter',system-ui,-apple-system,sans-serif;background-color:#0a040d;color:#f5ecf8;overflow-x:hidden;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+        #root{min-height:100vh;display:flex;flex-direction:column}
         
-        /* Neon Border Animation Overlay */
-        .neon-border::before {
-            content: '';
-            position: absolute;
-            inset: -1px;
-            background: linear-gradient(90deg, #9d41be, #c48dd8, #40e0d0, #9d41be);
-            background-size: 300% 300%;
-            border-radius: inherit;
-            z-index: -1;
-            opacity: 0.15;
-            transition: opacity 0.5s ease;
-            animation: neonFlow 6s linear infinite;
-        }
-        .neon-border:hover::before {
-            opacity: 0.6;
-        }
+        /* Font-display swap for all fonts */
+        @font-face{font-family:'Inter';font-display:swap}
+        @font-face{font-family:'Space Grotesk';font-display:swap}
+        
+        /* Animations */
+        @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+        @keyframes neonFlow{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+        @keyframes textGradient{0%{background-position:0% 50%}100%{background-position:200% 50%}}
+        
+        .glass{background:rgba(22,9,27,0.7);backdrop-filter:blur(12px);border:1px solid rgba(216,179,229,0.1);position:relative}
+        
+        .neon-border::before{content:'';position:absolute;inset:-1px;background:linear-gradient(90deg,#9d41be,#c48dd8,#40e0d0,#9d41be);background-size:300% 300%;border-radius:inherit;z-index:-1;opacity:0.15;transition:opacity 0.5s ease;animation:neonFlow 6s linear infinite}
+        .neon-border:hover::before{opacity:0.6}
+        
+        .text-gradient{background:linear-gradient(95deg,#ebd9f2,#c48dd8,#9d41be,#ebd9f2);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:textGradient 8s linear infinite}
+        
+        .glow-purple{box-shadow:0 0 40px -10px rgba(157,65,190,0.3);transition:box-shadow 0.4s ease}
+        .glow-purple:hover{box-shadow:0 0 60px -5px rgba(157,65,190,0.5)}
 
-        .text-gradient {
-            background: linear-gradient(95deg, #ebd9f2, #c48dd8, #9d41be, #ebd9f2);
-            background-size: 200% auto;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: textGradient 8s linear infinite;
-        }
-
-        .glow-purple {
-            box-shadow: 0 0 40px -10px rgba(157, 65, 190, 0.3);
-            transition: box-shadow 0.4s ease;
-        }
-        .glow-purple:hover {
-            box-shadow: 0 0 60px -5px rgba(157, 65, 190, 0.5);
-        }
-
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #0a040d;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #3f1a4c;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #5e2772;
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            * {
-                animation: none !important;
-                transition: none !important;
-            }
-        }
+        ::-webkit-scrollbar{width:8px}
+        ::-webkit-scrollbar-track{background:#0a040d}
+        ::-webkit-scrollbar-thumb{background:#3f1a4c;border-radius:4px}
+        ::-webkit-scrollbar-thumb:hover{background:#5e2772}
+        
+        @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
     </style>
-<script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react-router-dom": "https://esm.sh/react-router-dom@^7.12.0",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "framer-motion": "https://esm.sh/framer-motion@^12.25.0"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
+    
+    <!-- Favicon & App Icons -->
     <link rel="icon" href="/assets/new_logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="/assets/new_logo.png">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="/index.css">
 </head>
 <body>
+    <!-- No-JS Fallback for crawlers and accessibility -->
+    <noscript>
+        <div style="padding: 20px; text-align: center; background: #1f0d26; color: #f5ecf8;">
+            <h1>Versavio Tech - AI Solutions & Enterprise Software</h1>
+            <p>Please enable JavaScript to experience the full functionality of our website.</p>
+            <nav>
+                <a href="/" style="color: #c48dd8; margin: 0 10px;">Home</a>
+                <a href="/about" style="color: #c48dd8; margin: 0 10px;">About</a>
+                <a href="/services" style="color: #c48dd8; margin: 0 10px;">Services</a>
+                <a href="/projects" style="color: #c48dd8; margin: 0 10px;">Projects</a>
+                <a href="/blog" style="color: #c48dd8; margin: 0 10px;">Blog</a>
+                <a href="/contact" style="color: #c48dd8; margin: 0 10px;">Contact</a>
+            </nav>
+        </div>
+    </noscript>
+    
     <div id="root"></div>
-<script type="module" src="/index.tsx"></script>
+    <script type="module" src="/index.tsx"></script>
 </body>
 </html>

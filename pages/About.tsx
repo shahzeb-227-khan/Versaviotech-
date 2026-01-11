@@ -1,25 +1,36 @@
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { MotionWrapper } from '../components/MotionWrapper';
 import { Card3D } from '../components/Card3D';
 import { Link } from 'react-router-dom';
+import { SEOHead } from '../components/SEOHead';
+import { OptimizedImage } from '../components/OptimizedImage';
+
+// Structured data for About page
+const aboutStructuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'AboutPage',
+  mainEntity: {
+    '@type': 'Organization',
+    name: 'Versavio Tech',
+    description: 'Versavio Tech helps businesses turn ideas into reliable, scalable technology. We partner with organizations to understand their challenges, simplify complexity, and build solutions that work in the real world.',
+    foundingDate: '2024',
+    knowsAbout: ['AI Solutions', 'SAP Integration', 'Workflow Automation', 'Enterprise Software', 'Digital Transformation'],
+  }
+};
 
 export const About: React.FC = () => {
-  useEffect(() => {
-    document.title = 'About Versavio Tech — Enterprise AI & Digital Transformation';
-    const meta = document.querySelector('meta[name="description"]');
-    const content = 'Learn about Versavio Tech\'s mission to deliver AI consulting, workflow automation, and enterprise software solutions focused on business impact, usability, and long-term value.';
-    if (meta) meta.setAttribute('content', content);
-    else {
-      const m = document.createElement('meta');
-      m.name = 'description';
-      m.content = content;
-      document.head.appendChild(m);
-    }
-  }, []);
   return (
-    <div className="pt-32 pb-24">
+    <>
+      <SEOHead
+        title="About Versavio Tech — Enterprise AI & Digital Transformation"
+        description="Learn about Versavio Tech's mission to deliver AI consulting, workflow automation, and enterprise software solutions focused on business impact, usability, and long-term value."
+        canonicalUrl="/about"
+        structuredData={aboutStructuredData}
+      />
+      
+      <div className="pt-32 pb-24">
       <div className="max-w-7xl mx-auto px-6">
         {/* Hero Section */}
         <section className="mb-32">
@@ -36,8 +47,15 @@ export const About: React.FC = () => {
             </MotionWrapper>
             <MotionWrapper delay={0.2} direction="right">
                <div className="relative group">
-                 <div className="absolute -inset-1 bg-gradient-to-r from-thistle-600 to-thistle-400 rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
-                 <img src="/assets/aboutus.png" alt="Abstract AI brain visual with purple tones" className="relative rounded-3xl w-full" />
+                 <div className="absolute -inset-1 bg-gradient-to-r from-thistle-600 to-thistle-400 rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200" aria-hidden="true"></div>
+                 <OptimizedImage 
+                   src="/assets/aboutus.png" 
+                   alt="Versavio Tech team and AI visualization representing our approach to enterprise technology" 
+                   className="relative rounded-3xl w-full"
+                   width={600}
+                   height={400}
+                   priority={true}
+                 />
                </div>
             </MotionWrapper>
           </div>
@@ -102,5 +120,6 @@ export const About: React.FC = () => {
         </section>
       </div>
     </div>
+    </>
   );
 };

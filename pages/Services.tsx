@@ -1,25 +1,43 @@
 
-import React, { useEffect } from 'react';
-import { motion } from 'framer-motion';
+import React from 'react';
 import { MotionWrapper } from '../components/MotionWrapper';
 import { Card3D } from '../components/Card3D';
 import { Link } from 'react-router-dom';
+import { SEOHead } from '../components/SEOHead';
+
+// Service structured data for rich snippets
+const servicesStructuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  provider: {
+    '@type': 'Organization',
+    name: 'Versavio Tech'
+  },
+  serviceType: 'Enterprise Technology Services',
+  areaServed: 'Worldwide',
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Enterprise Services',
+    itemListElement: [
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Business Process Automation', description: 'Identify manual workflows, streamline approvals, reduce errors' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Intelligent & Custom Solutions', description: 'Tailored tools, dashboards, mobile apps and web platforms' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'ERP & System Integration', description: 'SAP, Microsoft Dynamics, Salesforce, Odoo integration' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Consulting & Strategy', description: 'Technology roadmaps, system audits, business analysis' } }
+    ]
+  }
+};
 
 export const Services: React.FC = () => {
-  useEffect(() => {
-    document.title = 'Services — AI Consulting, Workflow Automation, System Integration';
-    const meta = document.querySelector('meta[name="description"]');
-    const content = 'Versavio Tech services include AI consulting, workflow automation, ERP & system integration, and custom solutions to modernize SAP and enterprise systems.';
-    if (meta) meta.setAttribute('content', content);
-    else {
-      const m = document.createElement('meta');
-      m.name = 'description';
-      m.content = content;
-      document.head.appendChild(m);
-    }
-  }, []);
   return (
-    <div className="pt-32 pb-24">
+    <>
+      <SEOHead
+        title="Services — AI Consulting, Workflow Automation, System Integration"
+        description="Versavio Tech services include AI consulting, workflow automation, ERP & system integration, and custom solutions to modernize SAP and enterprise systems."
+        canonicalUrl="/services"
+        structuredData={servicesStructuredData}
+      />
+      
+      <div className="pt-32 pb-24">
       <div className="max-w-7xl mx-auto px-6">
         <section className="mb-24">
           <MotionWrapper className="max-w-4xl mx-auto text-center">
@@ -128,5 +146,6 @@ export const Services: React.FC = () => {
         </section>
       </div>
     </div>
+    </>
   );
 };

@@ -1,8 +1,7 @@
 
-import React, { useEffect } from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect, useMemo } from 'react';
 import { MotionWrapper } from '../components/MotionWrapper';
-import { Card3D } from '../components/Card3D';
+import { SEOHead } from '../components/SEOHead';
 
 const faqs = [
   { q: "How long does a consultation take?", a: "Typically 30–45 minutes, depending on your requirements." },
@@ -24,21 +23,56 @@ export const Contact: React.FC = () => {
     };
   }, []);
 
-  useEffect(() => {
-    document.title = 'Contact — Schedule AI & SAP Strategy Consultation';
-    const meta = document.querySelector('meta[name="description"]');
-    const content = 'Contact Versavio Tech to schedule a consultation on AI solutions, SAP integrations, workflow automation, and enterprise digital strategy.';
-    if (meta) meta.setAttribute('content', content);
-    else {
-      const m = document.createElement('meta');
-      m.name = 'description';
-      m.content = content;
-      document.head.appendChild(m);
+  // Contact page structured data
+  const contactStructuredData = useMemo(() => ({
+    '@context': 'https://schema.org',
+    '@type': 'ContactPage',
+    name: 'Contact Versavio Tech',
+    description: 'Contact Versavio Tech to schedule a consultation on AI solutions, SAP integrations, workflow automation, and enterprise digital strategy.',
+    url: 'https://www.versaviotech.com/contact',
+    mainEntity: {
+      '@type': 'Organization',
+      name: 'Versavio Tech',
+      email: 'info@versaviotech.com',
+      telephone: '+923220220670',
+      url: 'https://www.versaviotech.com',
+      contactPoint: {
+        '@type': 'ContactPoint',
+        telephone: '+923220220670',
+        contactType: 'sales',
+        email: 'info@versaviotech.com',
+        availableLanguage: ['English']
+      }
     }
-  }, []);
+  }), []);
+
+  // FAQ structured data
+  const faqStructuredData = useMemo(() => ({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map(faq => ({
+      '@type': 'Question',
+      name: faq.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.a
+      }
+    }))
+  }), []);
 
   return (
-    <div className="pt-32 pb-24">
+    <>
+      <SEOHead
+        title="Contact — Schedule AI & SAP Strategy Consultation"
+        description="Contact Versavio Tech to schedule a consultation on AI solutions, SAP integrations, workflow automation, and enterprise digital strategy."
+        canonicalUrl="/contact"
+        structuredData={contactStructuredData}
+      />
+      
+      {/* FAQ structured data */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }} />
+      
+      <div className="pt-32 pb-24">
       <div className="max-w-7xl mx-auto px-6">
         <section className="mb-24 text-center">
           <MotionWrapper>
@@ -157,5 +191,6 @@ export const Contact: React.FC = () => {
         </section>
       </div>
     </div>
+    </>
   );
 };

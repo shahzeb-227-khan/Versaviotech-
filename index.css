@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+/* Custom theme extension */
+@theme {
+  --color-thistle-50: #faf5fc;
+  --color-thistle-100: #f5e9fa;
+  --color-thistle-200: #ead3f4;
+  --color-thistle-300: #dbb3eb;
+  --color-thistle-400: #c587dc;
+  --color-thistle-500: #a95ac7;
+  --color-thistle-600: #8f3ca8;
+  --color-thistle-700: #762e89;
+  --color-thistle-800: #632871;
+  --color-thistle-900: #52245c;
+  --color-thistle-950: #200d24;
+
+  --font-family-heading: 'Space Grotesk', sans-serif;
+  --font-family-body: 'Inter', sans-serif;
+}
+
+/* Custom base styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #200d24 0%, #0a0512 50%, #200d24 100%);
+    min-height: 100vh;
+  }
+  
+  ::selection {
+    background-color: rgba(169, 90, 199, 0.3);
+    color: #faf5fc;
+  }
+}
+
+/* Custom component styles */
+@layer components {
+  .glass {
+    backdrop-filter: blur(24px);
+    background-color: rgba(32, 13, 36, 0.4);
+  }
+  
+  .glow-purple {
+    box-shadow: 0 0 40px rgba(157, 65, 190, 0.15), 
+                0 0 80px rgba(157, 65, 190, 0.05);
+  }
+  
+  .text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right, #dbb3eb, #c587dc, #dbb3eb);
+  }
+  
+  /* Prose styling for blog content */
+  .prose {
+    --tw-prose-body: #ead3f4;
+    --tw-prose-headings: #faf5fc;
+    --tw-prose-links: #c587dc;
+    --tw-prose-bold: #faf5fc;
+    --tw-prose-counters: #c587dc;
+    --tw-prose-bullets: #c587dc;
+    --tw-prose-hr: #632871;
+    --tw-prose-quotes: #ead3f4;
+    --tw-prose-quote-borders: #a95ac7;
+    --tw-prose-captions: #c587dc;
+    --tw-prose-code: #dbb3eb;
+    --tw-prose-pre-code: #ead3f4;
+    --tw-prose-pre-bg: #52245c;
+    --tw-prose-th-borders: #762e89;
+    --tw-prose-td-borders: #632871;
+  }
+}
+
+/* Custom utility styles */
+@layer utilities {
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+}
