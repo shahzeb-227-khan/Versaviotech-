@@ -12,7 +12,7 @@ interface Props {
 export const MotionWrapper: React.FC<Props> = ({ children, delay = 0, className = "", direction = "up" }) => {
   const variants: Variants = {
     hidden: { 
-      opacity: 0, 
+      opacity: 1, 
       y: direction === 'up' ? 30 : direction === 'down' ? -30 : 0,
       x: direction === 'left' ? 30 : direction === 'right' ? -30 : 0,
       filter: 'blur(8px)'

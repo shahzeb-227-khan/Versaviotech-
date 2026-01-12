@@ -11,7 +11,7 @@ import { OptimizedImage } from '../components/OptimizedImage';
 // Memoized blog card for performance
 const BlogCard = memo(({ post, index }: { post: typeof blogPosts[0]; index: number }) => (
   <motion.article
-    initial={{ opacity: 0, y: 20 }}
+    initial={{ opacity: 1, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ delay: index * 0.1 }}
     className="group cursor-pointer"
