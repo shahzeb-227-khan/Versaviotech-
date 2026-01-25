@@ -28,7 +28,10 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
   noIndex = false,
   structuredData,
 }) => {
-  const fullTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
+  // For homepage, use exact title from index.html. For other pages, append site name
+  const fullTitle = canonicalUrl === '/' 
+    ? title 
+    : (title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`);
   const fullCanonicalUrl = canonicalUrl ? `${BASE_URL}${canonicalUrl}` : undefined;
 
   // Organization structured data (always present)

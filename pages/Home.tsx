@@ -143,7 +143,7 @@ export const Home: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Versavio Tech — AI Solutions & Enterprise Software Development"
+        title="Versavio Tech | AI Solutions & Enterprise Software Development"
         description="Versavio Tech builds AI solutions and enterprise software for SAP, automation, and digital transformation. We deliver practical systems that improve workflows and drive business results."
         canonicalUrl="/"
         structuredData={homeStructuredData}
