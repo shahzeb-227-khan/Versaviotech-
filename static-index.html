@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Versavio Tech — AI Solutions & Enterprise Software Development</title>
+  <meta name="description" content="Versavio Tech builds AI solutions and enterprise software for SAP, automation, and digital transformation. We deliver practical systems that improve workflows and drive business results.">
+  <link rel="canonical" href="https://www.versaviotech.com/">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Versavio Tech — AI Solutions & Enterprise Software Development">
+  <meta property="og:description" content="Versavio Tech builds AI solutions and enterprise software for SAP, automation, and digital transformation.">
+  <meta property="og:url" content="https://www.versaviotech.com/">
+  <meta property="og:image" content="https://www.versaviotech.com/assets/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Versavio Tech",
+    "description": "AI Solutions, SAP Integration, Workflow Automation, and Enterprise Software Development",
+    "url": "https://www.versaviotech.com",
+    "telephone": "+92-322-0220670",
+    "email": "info@versaviotech.com",
+    "priceRange": "$$",
+    "serviceType": ["AI Consulting", "SAP Integration", "Workflow Automation", "Enterprise Software Development"],
+    "areaServed": {
+      "@type": "Place",
+      "name": "Worldwide"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/company/versaviotech"
+    ]
+  }
+  </script>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Versavio Tech",
+    "url": "https://www.versaviotech.com",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.versaviotech.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --color-bg: #0a0118;
+      --color-surface: #150527;
+      --color-primary: #9d41be;
+      --color-primary-hover: #b25dd4;
+      --color-text: #f3e8ff;
+      --color-text-muted: #d8b4fe;
+      --color-text-dim: #c4b5fd;
+      --color-border: rgba(157, 65, 190, 0.2);
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Header & Navigation */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(10, 1, 24, 0.9);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--color-border);
+      z-index: 100;
+    }
+
+    nav {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--color-text);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--color-text-muted);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--color-primary);
+    }
+
+    /* Main Container */
+    main {
+      padding-top: 5rem;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .section {
+      padding: 6rem 0;
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      padding: 8rem 0;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, var(--color-primary), #e879f9);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero p {
+      font-size: 1.125rem;
+      color: var(--color-text-dim);
+      margin-bottom: 2.5rem;
+      line-height: 1.7;
+    }
+
+    .cta-group {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 1rem 2rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background: var(--color-primary);
+      color: white;
+      border-color: var(--color-primary);
+    }
+
+    .btn-primary:hover {
+      background: var(--color-primary-hover);
+      transform: scale(1.05);
+    }
+
+    .btn-secondary {
+      background: rgba(157, 65, 190, 0.1);
+      color: var(--color-text);
+      border-color: var(--color-border);
+    }
+
+    .btn-secondary:hover {
+      background: var(--color-primary);
+      border-color: var(--color-primary);
+    }
+
+    /* Section Headers */
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .section-intro {
+      text-align: center;
+      font-size: 1.125rem;
+      color: var(--color-text-dim);
+      max-width: 48rem;
+      margin: 0 auto 4rem;
+      line-height: 1.7;
+    }
+
+    /* Cards */
+    .card-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .card {
+      background: rgba(157, 65, 190, 0.05);
+      border: 1px solid var(--color-border);
+      border-radius: 1.5rem;
+      padding: 2.5rem;
+      transition: all 0.3s;
+    }
+
+    .card:hover {
+      border-color: rgba(157, 65, 190, 0.4);
+      transform: translateY(-4px);
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--color-text);
+    }
+
+    .card p {
+      color: var(--color-text-dim);
+      line-height: 1.7;
+    }
+
+    .card ul {
+      list-style: none;
+      margin-top: 1.5rem;
+    }
+
+    .card li {
+      padding: 0.75rem 0;
+      color: var(--color-text-dim);
+      display: flex;
+      align-items: start;
+    }
+
+    .card li::before {
+      content: "•";
+      color: var(--color-primary);
+      font-weight: bold;
+      margin-right: 0.75rem;
+      font-size: 1.25rem;
+    }
+
+    /* Projects Preview */
+    .project-card {
+      background: rgba(157, 65, 190, 0.05);
+      border: 1px solid var(--color-border);
+      border-radius: 2rem;
+      padding: 2.5rem;
+      transition: all 0.3s;
+    }
+
+    .project-card:hover {
+      border-color: rgba(157, 65, 190, 0.4);
+    }
+
+    .project-tag {
+      display: inline-block;
+      color: var(--color-primary);
+      font-weight: 600;
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 1rem;
+    }
+
+    .project-card h3 {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Blog Preview */
+    .blog-card {
+      background: rgba(157, 65, 190, 0.05);
+      border: 1px solid var(--color-border);
+      border-radius: 2rem;
+      overflow: hidden;
+      transition: all 0.3s;
+      display: block;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .blog-card:hover {
+      border-color: rgba(157, 65, 190, 0.4);
+      transform: translateY(-8px);
+    }
+
+    .blog-card-content {
+      padding: 2rem;
+    }
+
+    .blog-meta {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--color-text-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .blog-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .blog-excerpt {
+      color: var(--color-text-dim);
+      font-size: 0.875rem;
+      line-height: 1.6;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      background: rgba(157, 65, 190, 0.05);
+      border: 1px solid var(--color-border);
+      border-radius: 3rem;
+      padding: 5rem 3rem;
+      text-align: center;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--color-border);
+      padding: 3rem 0;
+      margin-top: 4rem;
+    }
+
+    .footer-content {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      text-align: center;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--color-text-muted);
+      text-decoration: none;
+      font-size: 0.875rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--color-primary);
+    }
+
+    .copyright {
+      color: var(--color-text-muted);
+      font-size: 0.875rem;
+    }
+
+    /* Responsive Design */
+    @media (min-width: 768px) {
+      h1 {
+        font-size: 4rem;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .card-grid.three-col {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 767px) {
+      .nav-links {
+        gap: 1rem;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      .section {
+        padding: 3rem 0;
+      }
+
+      .cta-section {
+        padding: 3rem 1.5rem;
+      }
+    }
+
+    /* Utility Classes */
+    .text-center {
+      text-align: center;
+    }
+
+    .mt-8 {
+      margin-top: 2rem;
+    }
+
+    .mt-12 {
+      margin-top: 3rem;
+    }
+
+    .mb-12 {
+      margin-bottom: 3rem;
+    }
+
+    .bg-alt {
+      background: rgba(157, 65, 190, 0.03);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/" class="logo">Versavio Tech</a>
+      <ul class="nav-links">
+        <li><a href="/services">Services</a></li>
+        <li><a href="/projects">Projects</a></li>
+        <li><a href="/blog">Insights</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <h1>Building and Improving <span class="gradient-text">Technology</span> That Works for Your Business</h1>
+            <p>Versavio Tech partners with you to design new systems or enhance existing ones. We take time to understand your business, identify improvement opportunities, and deliver reliable, user-friendly solutions using the right technology for your needs.</p>
+            <div class="cta-group">
+              <a href="/contact" class="btn btn-primary">Schedule Free Consultation</a>
+              <a href="/projects" class="btn btn-secondary">View Our Work</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="section">
+      <div class="container">
+        <h2>Why Choose Versavio Tech?</h2>
+        <p class="section-intro">
+          We deliver customized, business-first technology solutions — never one-size-fits-all software. Our approach begins with understanding your business, processes, and challenges, and ends with practical, reliable systems that create measurable value, improve usability, and support long-term growth.
+        </p>
+      </div>
+    </section>
+
+    <!-- Who We're Best For Section -->
+    <section class="section bg-alt">
+      <div class="container">
+        <h2>Who We're Best For</h2>
+        <p class="section-intro">
+          Versavio Tech is a good fit for teams that want technology to actually solve day-to-day problems, not add more complexity. If you care about building systems that people genuinely use and that make work easier, you'll likely feel comfortable working with us.
+        </p>
+        
+        <div class="card-grid">
+          <article class="card">
+            <h3>A small or mid-sized business</h3>
+            <p>If your team is growing and manual work, spreadsheets, or disconnected tools are starting to slow things down, we help bring structure and clarity. The goal is not to replace everything at once, but to improve how things work step by step.</p>
+          </article>
+
+          <article class="card">
+            <h3>A startup or product team</h3>
+            <p>If you are building or scaling a product and need internal tools, system integrations, testing automation, or custom solutions to support your operations, we focus on building things that are reliable, easy to maintain, and practical for real-world use.</p>
+          </article>
+
+          <article class="card">
+            <h3>An operations-focused organization</h3>
+            <p>If your daily work involves repeatable tasks like approvals, reporting, testing, data handling, or coordination between teams, we help streamline those processes so they become more efficient and easier to manage.</p>
+          </article>
+
+          <article class="card">
+            <h3>Exploring automation for the first time</h3>
+            <p>If you are unsure where automation or AI fits into your business and want a thoughtful conversation before investing time and money, we are happy to start by understanding your situation rather than selling a solution.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Services Section -->
+    <section class="section">
+      <div class="container">
+        <h2 class="mb-12">Our Core Services</h2>
+        
+        <div class="card-grid">
+          <article class="card">
+            <h3>Business Process Automation</h3>
+            <ul>
+              <li>Identify and analyze manual, repetitive, or inefficient workflows</li>
+              <li>Streamline and optimize approvals, data handling, and reporting</li>
+              <li>Reduce errors and processing time for smoother operations</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Intelligent & Custom Solutions</h3>
+            <ul>
+              <li>Tailored internal tools, dashboards, and workflow-driven applications</li>
+              <li>Mobile apps and web platforms to enhance business operations</li>
+              <li>Automation and smart tools implemented where they add real value</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="text-center mt-12">
+          <a href="/services" class="btn btn-secondary">Explore All Services</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Success Stories Section -->
+    <section class="section bg-alt">
+      <div class="container">
+        <h2>Featured Success Stories</h2>
+        <p class="section-intro">Real results from real businesses. See how we've helped companies transform their operations with intelligent and practical solutions.</p>
+        
+        <div class="card-grid">
+          <article class="project-card">
+            <span class="project-tag">Enterprise Solution</span>
+            <h3>AI-Powered Automation for Investment Services</h3>
+            <p>Streamlined front-office workflows with AI-driven task automation, intelligent assignment, and knowledge-based resolutions.</p>
+          </article>
+
+          <article class="project-card">
+            <span class="project-tag">Enterprise Solution</span>
+            <h3>AI-Driven JIRA System Testing Automation</h3>
+            <p>Automated test case creation, intelligent task assignment, and defect triage using historical JIRA data.</p>
+          </article>
+
+          <article class="project-card">
+            <span class="project-tag">Enterprise Solution</span>
+            <h3>AI-Based Stock Recommendation Engine</h3>
+            <p>Built AI-driven stock recommendations combining quantitative factors, risk metrics, and market news sentiment analysis.</p>
+          </article>
+        </div>
+
+        <div class="text-center mt-12">
+          <a href="/projects" class="btn btn-secondary">View All Projects</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="section">
+      <div class="container">
+        <h2>Latest Insights</h2>
+        <p class="section-intro">Stay informed with our research-backed articles on AI, SAP, automation, and enterprise technology.</p>
+        
+        <div class="card-grid three-col">
+          <a href="/blog/ai-native-erp-sap-2026" class="blog-card">
+            <div class="blog-card-content">
+              <p class="blog-meta">February 12, 2025 • AI & ERP</p>
+              <h3>How AI Native ERP & Machine Learning Are Reshaping SAP Systems in 2026</h3>
+              <p class="blog-excerpt">Enterprise landscapes are shifting from 'System of Record' to 'System of Intelligence'. We analyze the 2026 SAP AI roadmap and its implications for business efficiency.</p>
+            </div>
+          </a>
+
+          <a href="/blog/sap-btp-strategic-insights" class="blog-card">
+            <div class="blog-card-content">
+              <p class="blog-meta">January 28, 2025 • Analytics</p>
+              <h3>SAP Business Technology Platform (BTP): Driving Analytics & Strategic Insights</h3>
+              <p class="blog-excerpt">Unpacking the dominance of BTP as the 'Clean Core' engine for modular enterprise intelligence and data-to-value conversion.</p>
+            </div>
+          </a>
+
+          <a href="/blog/erp-automation-trends-2025-2026" class="blog-card">
+            <div class="blog-card-content">
+              <p class="blog-meta">January 15, 2025 • Automation</p>
+              <h3>Top SAP & ERP Automation Trends for 2025–2026</h3>
+              <p class="blog-excerpt">Hyperautomation is no longer a luxury. We explore how BTP integration and AI are automating the majority of repetitive enterprise tasks.</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="text-center mt-12">
+          <a href="/blog" class="btn btn-secondary">View All Articles</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-section">
+          <h2>Ready to Transform Your Business?</h2>
+          <p class="section-intro">Schedule a free consultation with our experts and discover how we can help you achieve your business goals.</p>
+          <div class="cta-group" style="justify-content: center;">
+            <a href="/contact" class="btn btn-primary">Get Free Consultation</a>
+            <a href="/projects" class="btn btn-secondary">View Success Stories</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <nav class="footer-links">
+        <a href="/services">Services</a>
+        <a href="/projects">Projects</a>
+        <a href="/blog">Insights</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </nav>
+      <p class="copyright">&copy; 2026 Versavio Tech. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

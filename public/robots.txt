@@ -1,0 +1,27 @@
+# Robots.txt for Versavio Tech
+# https://www.versaviotech.com
+
+User-agent: *
+Allow: /
+
+# Block API routes only (safe)
+Disallow: /api/
+
+# Sitemap
+Sitemap: https://www.versaviotech.com/sitemap.xml
+
+# Block AI training bots (optional)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
