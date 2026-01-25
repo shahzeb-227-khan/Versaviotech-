@@ -2,7 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import logo from '../assets/new_logo.png';
+
+const logo = '/assets/new_logo.png';
 
 const navItems = [
   { label: 'Home', path: '/' },
