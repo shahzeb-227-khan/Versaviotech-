@@ -351,23 +351,25 @@ export const Home: React.FC = () => {
       {/* CTA Section */}
       <section className="py-24">
         <div className="max-w-5xl mx-auto px-6">
-          <div className="glass rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-thistle-500/20 blur-3xl -z-10" aria-hidden="true" />
-            <MotionWrapperLazy>
-              <h2 className="text-4xl md:text-6xl font-bold font-heading mb-8">Ready to Transform Your Business?</h2>
-              <p className="text-xl text-thistle-200 mb-12 max-w-2xl mx-auto">
-                Schedule a free consultation with our experts and discover how we can help you achieve your business goals.
-              </p>
-              <div className="flex flex-wrap justify-center gap-6">
-                <Link to="/contact" className="bg-thistle-50 text-thistle-950 px-10 py-4 rounded-full font-bold hover:scale-105 transition-transform">
-                  Get Free Consultation
-                </Link>
-                <Link to="/projects" className="border border-thistle-500 text-thistle-50 px-10 py-4 rounded-full font-bold hover:bg-thistle-500 transition-colors">
-                  View Success Stories
-                </Link>
+          <MotionWrapperLazy>
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-thistle-600 via-thistle-500 to-thistle-400 rounded-[3rem] blur-xl opacity-30 group-hover:opacity-60 transition duration-1000 group-hover:duration-200 animate-gradient" aria-hidden="true" />
+              <div className="relative glass rounded-[3rem] p-12 md:p-20 text-center overflow-hidden border border-thistle-500/20">
+                <h2 className="text-4xl md:text-6xl font-bold font-heading mb-8">Ready to Transform Your Business?</h2>
+                <p className="text-xl text-thistle-200 mb-12 max-w-2xl mx-auto">
+                  Schedule a free consultation with our experts and discover how we can help you achieve your business goals.
+                </p>
+                <div className="flex flex-wrap justify-center gap-6">
+                  <Link to="/contact" className="bg-thistle-50 text-thistle-950 px-10 py-4 rounded-full font-bold hover:scale-105 transition-transform">
+                    Get Free Consultation
+                  </Link>
+                  <Link to="/projects" className="border border-thistle-500 text-thistle-50 px-10 py-4 rounded-full font-bold hover:bg-thistle-500 transition-colors">
+                    View Success Stories
+                  </Link>
+                </div>
               </div>
-            </MotionWrapperLazy>
-          </div>
+            </div>
+          </MotionWrapperLazy>
         </div>
       </section>
       </div>

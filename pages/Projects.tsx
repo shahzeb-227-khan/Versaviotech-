@@ -167,20 +167,22 @@ export const Projects: React.FC = () => {
 
           <section className="text-center">
             <MotionWrapper>
-              <div
-                className="glass neon-border p-20 rounded-[3rem] border border-thistle-500/20 max-w-4xl mx-auto relative overflow-hidden group"
-                role="button"
-                tabIndex={0}
-                onClick={handleCtaClick}
-                onKeyDown={handleCtaKeyDown}
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-thistle-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true" />
-                <h2 className="text-4xl font-bold font-heading mb-6">Ready to Start Your Transformation?</h2>
-                <p className="text-thistle-300 mb-12 text-lg">Join the businesses that have already transformed their operations with Versavio Tech.</p>
-                <div className="flex flex-wrap justify-center gap-6">
-                  <button type="button" onClick={handleCtaClick} className="bg-thistle-500 text-white px-10 py-4 rounded-full font-bold hover:scale-105 transition-all shadow-xl shadow-thistle-500/20 active:scale-95">
-                    Start Your Project
-                </button>
+              <div className="relative group">
+                <div className="absolute -inset-1 bg-gradient-to-r from-thistle-600 via-thistle-500 to-thistle-400 rounded-[3rem] blur-xl opacity-30 group-hover:opacity-60 transition duration-1000 group-hover:duration-200 animate-gradient" aria-hidden="true" />
+                <div
+                  className="relative glass p-20 rounded-[3rem] border border-thistle-500/20 max-w-4xl mx-auto overflow-hidden"
+                  role="button"
+                  tabIndex={0}
+                  onClick={handleCtaClick}
+                  onKeyDown={handleCtaKeyDown}
+                >
+                  <h2 className="text-4xl font-bold font-heading mb-6">Ready to Start Your Transformation?</h2>
+                  <p className="text-thistle-300 mb-12 text-lg">Join the businesses that have already transformed their operations with Versavio Tech.</p>
+                  <div className="flex flex-wrap justify-center gap-6">
+                    <button type="button" onClick={handleCtaClick} className="bg-thistle-500 text-white px-10 py-4 rounded-full font-bold hover:scale-105 transition-all shadow-xl shadow-thistle-500/20 active:scale-95">
+                      Start Your Project
+                  </button>
+                </div>
               </div>
             </div>
           </MotionWrapper>

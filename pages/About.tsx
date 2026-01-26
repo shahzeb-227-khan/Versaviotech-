@@ -108,12 +108,15 @@ export const About: React.FC = () => {
         {/* CTA */}
         <section className="text-center">
           <MotionWrapper>
-            <div className="max-w-3xl mx-auto glass p-16 rounded-[3rem] border border-thistle-500/20">
-              <h2 className="text-3xl md:text-4xl font-bold font-heading mb-6">Ready to Work with Our Expert Team?</h2>
-              <p className="text-thistle-200 mb-10 text-lg">Let’s discuss how our expertise can transform your business operations and deliver measurable results.</p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link to="/contact" className="bg-thistle-500 text-white px-10 py-4 rounded-full font-bold hover:scale-105 transition-transform">Schedule Consultation</Link>
-                <Link to="/projects" className="glass px-10 py-4 rounded-full font-bold hover:bg-thistle-800 transition-colors">View Our Work</Link>
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-thistle-600 via-thistle-500 to-thistle-400 rounded-[3rem] blur-xl opacity-30 group-hover:opacity-60 transition duration-1000 group-hover:duration-200 animate-gradient" aria-hidden="true" />
+              <div className="relative max-w-3xl mx-auto glass p-16 rounded-[3rem] border border-thistle-500/20">
+                <h2 className="text-3xl md:text-4xl font-bold font-heading mb-6">Ready to Work with Our Expert Team?</h2>
+                <p className="text-thistle-200 mb-10 text-lg">Let's discuss how our expertise can transform your business operations and deliver measurable results.</p>
+                <div className="flex flex-wrap justify-center gap-4">
+                  <Link to="/contact" className="bg-thistle-500 text-white px-10 py-4 rounded-full font-bold hover:scale-105 transition-transform">Schedule Consultation</Link>
+                  <Link to="/projects" className="glass px-10 py-4 rounded-full font-bold hover:bg-thistle-800 transition-colors">View Our Work</Link>
+                </div>
               </div>
             </div>
           </MotionWrapper>

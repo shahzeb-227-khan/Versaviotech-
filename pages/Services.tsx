@@ -134,12 +134,15 @@ export const Services: React.FC = () => {
 
         <section className="text-center">
           <MotionWrapper>
-            <div className="max-w-4xl mx-auto glass p-20 rounded-[3rem] glow-purple">
-              <h2 className="text-4xl md:text-5xl font-bold font-heading mb-8">Ready to Transform Your Business?</h2>
-              <p className="text-thistle-200 mb-12 text-lg">Schedule a free consultation with our experts and discover the perfect solution for your business needs.</p>
-              <div className="flex flex-wrap justify-center gap-6">
-                <Link to="/contact" className="bg-thistle-50 text-thistle-950 px-10 py-4 rounded-full font-bold hover:scale-105 transition-transform">Schedule Free Consultation</Link>
-                <Link to="/projects" className="border border-thistle-500 px-10 py-4 rounded-full font-bold hover:bg-thistle-500 transition-all">View Success Stories</Link>
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-thistle-600 via-thistle-500 to-thistle-400 rounded-[3rem] blur-xl opacity-30 group-hover:opacity-60 transition duration-1000 group-hover:duration-200 animate-gradient" aria-hidden="true" />
+              <div className="relative max-w-4xl mx-auto glass p-20 rounded-[3rem] border border-thistle-500/20">
+                <h2 className="text-4xl md:text-5xl font-bold font-heading mb-8">Ready to Transform Your Business?</h2>
+                <p className="text-thistle-200 mb-12 text-lg">Schedule a free consultation with our experts and discover the perfect solution for your business needs.</p>
+                <div className="flex flex-wrap justify-center gap-6">
+                  <Link to="/contact" className="bg-thistle-50 text-thistle-950 px-10 py-4 rounded-full font-bold hover:scale-105 transition-transform">Schedule Free Consultation</Link>
+                  <Link to="/projects" className="border border-thistle-500 px-10 py-4 rounded-full font-bold hover:bg-thistle-500 transition-all">View Success Stories</Link>
+                </div>
               </div>
             </div>
           </MotionWrapper>
